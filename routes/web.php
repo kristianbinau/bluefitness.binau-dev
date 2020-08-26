@@ -21,3 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/admin', 'AdminController@index')->name('home');
+Route::get('/admin/record', 'AdminController@form')->name('RecordForm');
+Route::post('/admin/record/add', 'AdminController@store')->name('RecordFormStore');
