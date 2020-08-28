@@ -32,8 +32,9 @@ class AdminController extends Controller
         $users = User::select('id', 'name')->cursor();
         $exercises = Exercise::select('id', 'name')->cursor();
         $weightClasses = ExerciseWeightClass::select('id', 'name')->cursor();
+        $records = Record::with('exercise')->with('exerciseWeightClass')->with('user')->get();
 
-        return view('adminRecord', ['users' => $users, 'exercises' => $exercises, 'weightClasses' => $weightClasses,]);
+        return view('adminRecord', ['records' => $records, 'users' => $users, 'exercises' => $exercises, 'weightClasses' => $weightClasses,]);
     }
 
     public function storeRecord(Request $request)
@@ -67,7 +68,9 @@ class AdminController extends Controller
 
     public function user()
     {
-        return view('adminUser');
+        $users = User::select('id', 'name', 'created_at')->cursor();
+
+        return view('adminUser', ['users' => $users]);
     }
 
     public function storeUser(Request $request)
@@ -95,7 +98,9 @@ class AdminController extends Controller
 
     public function class()
     {
-        return view('adminClass');
+        $weightClasses = ExerciseWeightClass::select('id', 'name', 'type', 'gender', 'age_from', 'age_to', 'weight_from', 'weight_to', 'created_at')->cursor();
+
+        return view('adminClass', ['weightClasses' => $weightClasses]);
     }
 
     public function storeClass(Request $request)
@@ -166,13 +171,15 @@ class AdminController extends Controller
 
     public function exercise()
     {
-        return view('adminExercise');
+        $exercises = Exercise::select('id', 'name', 'created_at')->cursor();
+
+        return view('adminExercise', ['exercises' => $exercises]);
     }
 
     public function storeExercise(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|unique:exercise',
+            'name' => 'required|unique:exercises',
         ]);
 
         $name = $request['name'];

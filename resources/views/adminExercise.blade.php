@@ -27,5 +27,24 @@
 
             <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
         </form>
+
+        <table class="table table-dark mt-4">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Exercise</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($exercises as $exercise)
+                <tr>
+                    <th scope="row">{{ $exercise->id }}</th>
+                    <td>{{ $exercise->name }}</td>
+                    <td>{{ $exercise->created_at }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection

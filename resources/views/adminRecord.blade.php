@@ -86,5 +86,30 @@
 
             <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
         </form>
+
+        <table class="table table-dark mt-4">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">User</th>
+                <th scope="col">Exercise</th>
+                <th scope="col">Weight Class</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach ($records as $record)
+                <tr>
+                    <th scope="row">{{ $record->id }}</th>
+                    <td>{{ $record->user['name'] }}</td>
+                    <td>{{ $record->exercise['name'] }}</td>
+                    <td>{{ $record->exerciseWeightClass['name'] }}</td>
+                    <td>{{ $record->weight }}</td>
+                    <td>{{ $record->updated_at }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection

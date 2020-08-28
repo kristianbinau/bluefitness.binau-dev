@@ -25,7 +25,15 @@ class Record extends Model
      */
     public function exercise()
     {
-        return $this->belongsTo(Exercise::class, 'id', 'exercise_id');
+        return $this->belongsTo(Exercise::class, 'exercise_id', 'id');
+    }
+
+    /**
+     * Get the parent
+     */
+    public function exerciseWeightClass()
+    {
+        return $this->belongsTo(ExerciseWeightClass::class, 'exercise_weight_class_id', 'id');
     }
 
     /**
@@ -33,6 +41,6 @@ class Record extends Model
      */
     public function user()
     {
-        return $this->belongsTo(User::class, 'id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }
