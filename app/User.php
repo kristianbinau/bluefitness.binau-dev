@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the child
+     */
+    public function records()
+    {
+        return $this->hasMany(Record::class, 'exercise_id', 'id');
+    }
 }
