@@ -11,7 +11,7 @@ class Exercise extends Model
      *
      * @var string
      */
-    protected $table = 'exercise';
+    protected $table = 'exercises';
 
     /**
      * The attributes that are mass assignable.

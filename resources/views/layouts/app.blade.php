@@ -54,8 +54,17 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('RecordForm') }}">
+                                    <a class="dropdown-item" href="{{ route('AdminRecordHome') }}">
                                         {{ __('Add Record') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('AdminUserHome') }}">
+                                        {{ __('Add User') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('AdminClassHome') }}">
+                                        {{ __('Add Weight Class') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('AdminExerciseHome') }}">
+                                        {{ __('Add Exercise') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

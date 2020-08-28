@@ -16,12 +16,12 @@ class CreateExerciseWeightClasses extends Migration
         Schema::create('exercise_weight_classes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('type');
             $table->string('gender')->nullable();
             $table->integer('age_from')->nullable();
             $table->integer('age_to')->nullable();
             $table->integer('weight_from')->nullable();
             $table->integer('weight_to')->nullable();
-            $table->string('weight')->nullable();
             $table->timestamps();
         });
     }
