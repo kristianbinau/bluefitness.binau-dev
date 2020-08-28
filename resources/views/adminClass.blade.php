@@ -42,9 +42,9 @@
                         name="type"
                         id="type">
                     <option {{ Session::has('type') ? 'disabled hidden ' : 'disabled hidden selected' }}>Select a Type</option>
-                    <option {{ Session::get('type') === 'Age' ? 'selected' : '' }} >Age</option>
-                    <option {{ Session::get('type') === 'Weight' ? 'selected' : '' }} >Weight</option>
-                    <option {{ Session::get('type') === 'Gender' ? 'selected' : '' }} >Gender</option>
+                    <option {{ Session::get('type') === 'Age' ? 'selected' : '' }} value="Age" >Age</option>
+                    <option {{ Session::get('type') === 'Weight' ? 'selected' : '' }} value="Weight" >Weight</option>
+                    <option {{ Session::get('type') === 'Gender' ? 'selected' : '' }} value="Gender" >Gender</option>
                 </select>
 
                 <!-- Error -->

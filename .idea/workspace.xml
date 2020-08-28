@@ -4,11 +4,8 @@
     <list default="true" id="6002e62f-e041-45b7-8677-8dcb8bbe225e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Record.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Record.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adminClass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminClass.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminExercise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminExercise.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/adminRecord.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminRecord.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adminUser.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +174,7 @@
       <updated>1597862303014</updated>
       <workItem from="1597862304152" duration="5007000" />
       <workItem from="1598183359467" duration="1324000" />
-      <workItem from="1598604934865" duration="15520000" />
+      <workItem from="1598604934865" duration="16918000" />
     </task>
     <servers />
   </component>

@@ -63,7 +63,7 @@ class AdminController extends Controller
         );
 
         //
-        return back()->with('success', 'We have received your message and would like to thank you for writing to us.');
+        return back()->with('success', 'We have added a new record.');
     }
 
     public function user()
