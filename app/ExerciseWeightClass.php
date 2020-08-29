@@ -18,7 +18,7 @@ class ExerciseWeightClass extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'type', 'gender', 'age_from', 'age_to', 'weight_from', 'weight_to'];
+    protected $fillable = ['name', 'gender', 'weight'];
 
     /**
      * Get the child

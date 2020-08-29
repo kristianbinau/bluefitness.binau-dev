@@ -24,7 +24,7 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin');
+        return view('admin.home');
     }
 
     public function record()
@@ -34,7 +34,7 @@ class AdminController extends Controller
         $weightClasses = ExerciseWeightClass::select('id', 'name')->cursor();
         $records = Record::with('exercise')->with('exerciseWeightClass')->with('user')->get();
 
-        return view('adminRecord', ['records' => $records, 'users' => $users, 'exercises' => $exercises, 'weightClasses' => $weightClasses,]);
+        return view('admin.record', ['records' => $records, 'users' => $users, 'exercises' => $exercises, 'weightClasses' => $weightClasses,]);
     }
 
     public function storeRecord(Request $request)
@@ -62,7 +62,6 @@ class AdminController extends Controller
             ]
         );
 
-        //
         return back()->with('success', 'We have added a new record.');
     }
 
@@ -70,7 +69,7 @@ class AdminController extends Controller
     {
         $users = User::select('id', 'name', 'created_at')->cursor();
 
-        return view('adminUser', ['users' => $users]);
+        return view('admin.user', ['users' => $users]);
     }
 
     public function storeUser(Request $request)
@@ -92,80 +91,37 @@ class AdminController extends Controller
             ]
         );
 
-        //
         return back()->with('success', 'We have added a new user.');
     }
 
     public function class()
     {
-        $weightClasses = ExerciseWeightClass::select('id', 'name', 'type', 'gender', 'age_from', 'age_to', 'weight_from', 'weight_to', 'created_at')->cursor();
+        $weightClasses = ExerciseWeightClass::select('id', 'name', 'gender', 'weight', 'created_at')->cursor();
 
-        return view('adminClass', ['weightClasses' => $weightClasses]);
+        return view('admin.weightClass', ['weightClasses' => $weightClasses]);
     }
 
     public function storeClass(Request $request)
     {
-        // Handling changing of types
-        if ($request['send'] !== 'Submit') {
-            return back()->with('type', $request['type'])->with('name', $request['name']);
-        }
-
         $this->validate($request, [
             'name' => 'required|unique:exercise_weight_classes',
-            'type' => 'required',
+            'gender' => 'required',
+            'weight' => 'required',
         ]);
 
         $name = $request['name'];
-        $type = strtolower($request['type']);
         $gender = $request['gender'];
-        $ageFrom = $request['ageFrom'];
-        $ageTo = $request['ageTo'];
-        $weightFrom = $request['weightFrom'];
-        $weightTo = $request['weightTo'];
-
-        // Handling of different types and what needs to be required
-        if ($type === 'age') {
-            try {
-                $this->validate($request, [
-                    'ageFrom' => 'required',
-                    'ageTo' => 'required',
-                ]);
-            } catch (ValidationException $e) {
-                return back()->with('error', 'The "Age From" & "Age To" field is required');
-            }
-        } elseif ($type === 'weight') {
-            try {
-                $this->validate($request, [
-                    'weightFrom' => 'required',
-                    'weightTo' => 'required',
-                ]);
-            } catch (ValidationException $e) {
-                return back()->with('error', 'The "Weight From" & "Weight To" field is required.');
-            }
-        } elseif ($type === 'gender') {
-            try {
-                $this->validate($request, [
-                    'gender' => 'required',
-                ]);
-            } catch (ValidationException $e) {
-                return back()->with('error', 'The "Gender" field is required.');
-            }
-        }
+        $weight = $request['weight'];
 
         //  Store data in database
         ExerciseWeightClass::create(
             [
                 'name' => $name,
-                'type' => $type,
                 'gender' => $gender,
-                'age_from' => $ageFrom,
-                'age_to' => $ageTo,
-                'weight_from' => $weightFrom,
-                'weight_to' => $weightTo,
+                'weight' => $weight,
             ]
         );
 
-        //
         return back()->with('success', 'We have added a new weight class.');
     }
 
@@ -173,7 +129,7 @@ class AdminController extends Controller
     {
         $exercises = Exercise::select('id', 'name', 'created_at')->cursor();
 
-        return view('adminExercise', ['exercises' => $exercises]);
+        return view('admin.exercise', ['exercises' => $exercises]);
     }
 
     public function storeExercise(Request $request)
@@ -191,7 +147,6 @@ class AdminController extends Controller
             ]
         );
 
-        //
         return back()->with('success', 'We have added a new exercise.');
     }
 }
