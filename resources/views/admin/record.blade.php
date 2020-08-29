@@ -89,7 +89,7 @@
 
         <table class="table table-dark mt-4">
             <thead>
-            <tr>æ
+            <tr>
                 <th scope="col">#</th>
                 <th scope="col">User</th>
                 <th scope="col">Exercise</th>
