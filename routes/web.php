@@ -21,25 +21,28 @@ Auth::routes();
 Route::prefix('admin')->name('Admin')->group(
     function () {
         Route::get('/', AdminController::class . '@index')->name('Home');
-        // Render in view
+
         Route::prefix('record')->name('Record')->group(
             function () {
                 Route::get('/', AdminController::class . '@record')->name('Home');
                 Route::post('/', AdminController::class . '@storeRecord')->name('Store');
             }
         );
+
         Route::prefix('user')->name('User')->group(
             function () {
                 Route::get('/', AdminController::class . '@user')->name('Home');
                 Route::post('/', AdminController::class . '@storeUser')->name('Store');
             }
         );
+
         Route::prefix('class')->name('Class')->group(
             function () {
                 Route::get('/', AdminController::class . '@class')->name('Home');
                 Route::post('/', AdminController::class . '@storeClass')->name('Store');
             }
         );
+
         Route::prefix('exercise')->name('Exercise')->group(
             function () {
                 Route::get('/', AdminController::class . '@exercise')->name('Home');

@@ -75,7 +75,7 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">User</th>
+                <th scope="col">Name</th>
                 <th scope="col">Gender</th>
                 <th scope="col">Weight</th>
                 <th scope="col">Date</th>
