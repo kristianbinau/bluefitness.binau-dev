@@ -19,7 +19,7 @@
                     @foreach ($table['exercises'] as $exercise)
                         <tr>
                             <th scope="row">{{ $exercise['exercise']->name }}</th>
-                            <td>{{ $exercise['records'][0]->weight ?? '' }} kg</td>
+                            <td>{{ $exercise['records'][0]->weight ?? '0' }} kg</td>
                             <td>{{ $exercise['records'][0]['user']->name ?? '' }}</td>
                             <td>{{ $exercise['records'][0]->created_at ?? '' }}</td>
                         </tr>
