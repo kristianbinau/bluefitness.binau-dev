@@ -24,9 +24,6 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "@sentry/browser": "^5.22.3",
-        "@sentry/integrations": "^5.22.3",
-        "@sentry/tracing": "^5.22.3",
         "vue-axios": "^2.1.5"
     }
 }

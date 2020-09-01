@@ -13,22 +13,6 @@ import VueAxios from 'vue-axios'
 
 Vue.use(VueAxios, axios)
 
-import * as Sentry from "@sentry/browser";
-import { Vue as VueIntegration } from "@sentry/integrations";
-import { Integrations } from '@sentry/tracing';
-
-Sentry.init({
-    dsn: "https://07c528cded204f3bb2450d830c5b9732@o430463.ingest.sentry.io/5413925",
-    integrations: [
-        new VueIntegration({
-            Vue,
-            tracing: true
-        }),
-        new Integrations.BrowserTracing()
-    ],
-    tracesSampleRate: 1
-});
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
