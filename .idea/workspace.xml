@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6002e62f-e041-45b7-8677-8dcb8bbe225e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/weightClass.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AdminApiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/ExerciseTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/RecordTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/UserTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/WeightClassTable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ExerciseWeightClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ExerciseWeightClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_18_184116_create_exercise_weight_classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_18_184116_create_exercise_weight_classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminClass.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminExercise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/exercise.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminRecord.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/record.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adminUser.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scoreboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/RecordForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/exercise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/exercise.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/record.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/record.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/weightClass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/weightClass.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +151,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,13 +161,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\app" />
-      <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\database\migrations" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\resources\views\admin" />
       <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\resources\js\components" />
+      <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\app" />
+      <recent name="C:\Users\krist\dev\psn\bluefitness.binau-dev\database\migrations" />
     </key>
   </component>
   <component name="RunManager">
@@ -186,6 +190,7 @@
       <workItem from="1597862304152" duration="5007000" />
       <workItem from="1598183359467" duration="1324000" />
       <workItem from="1598604934865" duration="23203000" />
+      <workItem from="1598987241900" duration="5205000" />
     </task>
     <servers />
   </component>
@@ -213,10 +218,11 @@
       <screen x="-2560" y="-101" width="2560" height="1400" />
     </state>
     <state x="-2468" y="-9" width="2376" height="1216" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040/-2560.-101.2560.1400@-2560.-101.2560.1400" timestamp="1598612213652" />
-    <state x="-1624" y="280" key="run.anything.popup" timestamp="1598620756978">
-      <screen x="-2560" y="-101" width="2560" height="1400" />
+    <state x="702" y="286" key="run.anything.popup" timestamp="1598992457245">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1624" y="280" key="run.anything.popup/0.0.1920.1040/-2560.-101.2560.1400@-2560.-101.2560.1400" timestamp="1598620756978" />
+    <state x="702" y="286" key="run.anything.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598992457245" />
     <state x="-1729" y="202" width="896" height="904" key="search.everywhere.popup" timestamp="1598633856503">
       <screen x="-2560" y="-101" width="2560" height="1400" />
     </state>

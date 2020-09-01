@@ -39,7 +39,7 @@ Route::prefix('admin')->name('Admin')->group(
 
         Route::prefix('exercise')->name('Exercise')->group(
             function () {
-                Route::get('/delete/{id}', \Api\AdminApiController::class . '@deleteExercise')->name('Delete');
+
             }
         );
     }

@@ -71,27 +71,6 @@
             <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
         </form>
 
-        <table class="table table-dark mt-4">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Weight</th>
-                <th scope="col">Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach ($weightClasses as $weightClass)
-                <tr>
-                    <th scope="row">{{ $weightClass->id }}</th>
-                    <td>{{ $weightClass->name }}</td>
-                    <td>{{ $weightClass->gender }}</td>
-                    <td>{{ $weightClass->weight }}</td>
-                    <td>{{ $weightClass->created_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+        <weight-class-table data="{{ $weightClasses }}" ></weight-class-table>
     </div>
 @endsection

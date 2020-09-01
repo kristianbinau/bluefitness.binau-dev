@@ -26,6 +26,7 @@ Route::prefix('admin')->name('Admin')->group(
             function () {
                 Route::get('/', AdminController::class . '@record')->name('Home');
                 Route::post('/', AdminController::class . '@storeRecord')->name('Store');
+                Route::get('/delete/{id}', \Api\AdminApiController::class . '@deleteRecord')->name('Delete');
             }
         );
 
@@ -33,6 +34,7 @@ Route::prefix('admin')->name('Admin')->group(
             function () {
                 Route::get('/', AdminController::class . '@user')->name('Home');
                 Route::post('/', AdminController::class . '@storeUser')->name('Store');
+                Route::get('/delete/{id}', \Api\AdminApiController::class . '@deleteUser')->name('Delete');
             }
         );
 
@@ -40,6 +42,7 @@ Route::prefix('admin')->name('Admin')->group(
             function () {
                 Route::get('/', AdminController::class . '@class')->name('Home');
                 Route::post('/', AdminController::class . '@storeClass')->name('Store');
+                Route::get('/delete/{id}', \Api\AdminApiController::class . '@deleteClass')->name('Delete');
             }
         );
 
@@ -47,6 +50,7 @@ Route::prefix('admin')->name('Admin')->group(
             function () {
                 Route::get('/', AdminController::class . '@exercise')->name('Home');
                 Route::post('/', AdminController::class . '@storeExercise')->name('Store');
+                Route::get('/delete/{id}', \Api\AdminApiController::class . '@deleteExercise')->name('Delete');
             }
         );
     }
