@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/debug-sentry', function () {
-    throw new Exception('Sentry Error!');
-});
-
 Route::get('/', ScoreboardController::class . '@index')->name('Home');
 
 Route::prefix('admin')->name('Admin')->group(
