@@ -6,25 +6,28 @@
 
 require('./bootstrap');
 
-import * as Sentry from "@sentry/browser";
-import { Vue as VueIntegration } from "@sentry/integrations";
-import { Integrations } from "@sentry/tracing";
+window.Vue = require('vue');
 
-import Vue from "vue";
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+
 Vue.use(VueAxios, axios)
+
+import * as Sentry from "@sentry/browser";
+import { Vue as VueIntegration } from "@sentry/integrations";
+import { Integrations } from '@sentry/tracing';
 
 Sentry.init({
     release: "bluefitness-binau-dev-vue@" + process.env.npm_package_version,
+    dsn: "https://07c528cded204f3bb2450d830c5b9732@o430463.ingest.sentry.io/5413925",
     integrations: [
-        new Integrations.BrowserTracing(),
         new VueIntegration({
             Vue,
-            tracing: true,
+            tracing: true
         }),
+        new Integrations.BrowserTracing()
     ],
-    tracesSampleRate: 1.0, // Be sure to lower this in production
+    tracesSampleRate: 1
 });
 
 /**
