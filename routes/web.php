@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ScoreboardController::class . '@index')->name('Home');
-
 Auth::routes();
+
+Route::get('/', ScoreboardController::class . '@index')->name('Home');
 
 Route::prefix('admin')->name('Admin')->group(
     function () {
