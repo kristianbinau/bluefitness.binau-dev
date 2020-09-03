@@ -6,6 +6,7 @@ use App\Exercise;
 use App\ExerciseWeightClass;
 use App\Record;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
@@ -51,6 +52,7 @@ class AdminController extends Controller
         $exercise = $request['exercise'];
         $weightClass = $request['weightClass'];
         $weight = $request['weight'];
+        $date = $request['date'] ?? (new Carbon())->format('Y-m-d');
 
         //  Store data in database
         Record::create(
@@ -58,7 +60,8 @@ class AdminController extends Controller
                 'user_id' => $user,
                 'exercise_id' => $exercise,
                 'exercise_weight_class_id' => $weightClass,
-                'weight' => $weight,
+                'weight' => str_replace(',', '.', $weight),
+                'date' => $date,
             ]
         );
 

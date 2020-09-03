@@ -9,6 +9,7 @@
                 <th scope="col">Weight Class</th>
                 <th scope="col">Weight</th>
                 <th scope="col">Date</th>
+                <th scope="col">Created At</th>
                 <th scope="col">Del</th>
             </tr>
             </thead>
@@ -19,7 +20,8 @@
                 <td>{{ record.exercise['name'] }}</td>
                 <td>{{ record.exercise_weight_class.name }}</td>
                 <td>{{ record.weight }}</td>
-                <td>{{ record.updated_at }}</td>
+                <td>{{ record.date }}</td>
+                <td>{{ record.created_at }}</td>
                 <td v-on:click="deleteRowAndRefresh(record.id)" style="cursor: pointer">X</td>
             </tr>
             </tbody>

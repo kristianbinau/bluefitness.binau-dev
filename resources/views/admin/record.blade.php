@@ -77,9 +77,23 @@
                        id="weight">
 
                 <!-- Error -->
-                @if ($errors->has('name'))
+                @if ($errors->has('weight'))
                     <div class="alert alert-danger" role="alert">
-                        {{ $errors->first('name') }}
+                        {{ $errors->first('weight') }}
+                    </div>
+                @endif
+            </div>
+
+            <div class="form-group">
+                <label>Date - (Format: YYYY-MM-DD)</label>
+                <input type="text" class="form-control {{ $errors->has('date') ? 'error' : '' }}"
+                       name="date"
+                       id="date">
+
+                <!-- Error -->
+                @if ($errors->has('date'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('date') }}
                     </div>
                 @endif
             </div>
