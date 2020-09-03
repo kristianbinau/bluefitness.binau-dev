@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6002e62f-e041-45b7-8677-8dcb8bbe225e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bluefitness.binau-dev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bluefitness.binau-dev.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScoreboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScoreboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +144,9 @@
       <path value="$PROJECT_DIR$/vendor/php-http/guzzle6-adapter" />
       <path value="$PROJECT_DIR$/vendor/php-http/discovery" />
       <path value="$PROJECT_DIR$/vendor/php-http/client-common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1gKTUplG8k0uyFjwYfuc89VwqWK" />
@@ -151,6 +159,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -191,6 +200,7 @@
       <workItem from="1598183359467" duration="1324000" />
       <workItem from="1598604934865" duration="23203000" />
       <workItem from="1598987241900" duration="5749000" />
+      <workItem from="1599137545621" duration="4278000" />
     </task>
     <servers />
   </component>
