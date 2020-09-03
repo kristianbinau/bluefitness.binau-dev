@@ -18,7 +18,7 @@ class Record extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id', 'exercise_id', 'exercise_weight_class_id', 'weight'];
+    protected $fillable = ['user_id', 'exercise_id', 'exercise_weight_class_id', 'weight', 'date'];
 
     /**
      * Get the parent

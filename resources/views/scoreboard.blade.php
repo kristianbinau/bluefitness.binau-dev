@@ -5,7 +5,7 @@
         <div class="content">
             <div class="container">
                 @foreach ($data as $table)
-                    <label>{{ $table['weightClass']->name }}</label>
+                    <label>{{ $table['weightClass']->name .' - '. $table['weightClass']->weight .' kg' }}</label>
                 <table class="table table-dark">
                     <thead>
                     <tr>
@@ -21,7 +21,7 @@
                             <th scope="row">{{ $exercise['exercise']->name }}</th>
                             <td>{{ $exercise['records'][0]->weight ?? '0' }} kg</td>
                             <td>{{ $exercise['records'][0]['user']->name ?? '' }}</td>
-                            <td>{{ $exercise['records'][0]->created_at ?? '' }}</td>
+                            <td>{{ isset($exercise['records'][0]->date) === true ? $exercise['records'][0]->date : ''}}</td>
                         </tr>
                     @endforeach
                     </tbody>
