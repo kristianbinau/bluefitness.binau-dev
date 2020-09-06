@@ -9,12 +9,13 @@
         <div class="content">
             <div class="container">
                 @foreach ($data as $table)
-                    <div class="label-container text-center font-weight-bold mb-3 rounded">
+
+                    <div class="label-container">
                         <label>{{ $table['weightClass']->name .' - '. $table['weightClass']->weight }}</label>
                     </div>
-                    <div class="table-container rounded">
 
-                        <table class="table rounded">
+                    <div class="table-container">
+                        <table class="table">
                             <thead class="thead-dark">
                             <tr>
                                 <th scope="col">Exercise</th>
@@ -35,6 +36,7 @@
                             </tbody>
                         </table>
                     </div>
+
                 @endforeach
             </div>
         </div>
@@ -43,6 +45,10 @@
 
 @section('scripts-append')
     <script>
+        setTimeout(function(){
+            location.reload();
+        },60000);
+
         var fps = 100;
         var speedFactor = 0.001;
         var minDelta = 0.5;

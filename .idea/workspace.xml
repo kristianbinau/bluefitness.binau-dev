@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6002e62f-e041-45b7-8677-8dcb8bbe225e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/sass/scoreboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/exercise.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/exercise.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/record.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/record.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/weightClass.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/weightClass.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/scoreboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/scoreboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/scoreboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/scoreboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/scoreboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/scoreboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +200,7 @@
       <workItem from="1598987241900" duration="5749000" />
       <workItem from="1599137545621" duration="8629000" />
       <workItem from="1599199246037" duration="35000" />
-      <workItem from="1599334945884" duration="8796000" />
+      <workItem from="1599334945884" duration="11724000" />
     </task>
     <servers />
   </component>

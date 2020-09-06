@@ -1,6 +1,6 @@
 body {
-  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #23d5ab);
-  background-size: 3000% 3000%;
+  background: linear-gradient(-60deg, #0f2027, #203a43, #2c5364, #23d5ab);
+  background-size: 1000% 1000%;
   -webkit-animation: gradient 45s ease infinite;
           animation: gradient 45s ease infinite;
 }
@@ -30,17 +30,24 @@ body {
 }
 .label-container {
   height: 50px;
-  background: white;
-  border-radius: 10px;
+  background: #343a40;
+  border-radius: 15px 15px 0 0;
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: #343a40;
+}
+.label-container label {
+  color: white;
+  font-weight: 600;
+  margin-top: 8px;
+  margin-left: 12px;
 }
 
 .table-container {
   background: white;
-  border-collapse: separate !important;
-  border-radius: 10px;
-}
-
-.table-container {
-  background: white;
-  border-collapse: separate !important;
+  border-radius: 0 0 15px 15px;
+  border-width: 0 5px 5px 5px;
+  border-style: solid;
+  border-color: #343a40;
+  margin-bottom: 40px;
 }
