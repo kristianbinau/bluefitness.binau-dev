@@ -42,12 +42,22 @@
         ],
         methods: {
             deleteRowAndRefresh(id) {
-                Vue.axios.get('/admin/record/delete/' + id)
-                    .then((response) => {
-                        if (response.status === 200) {
-                            location.reload();
-                        };
-                    })
+                if (confirm('Delete ' + id + '?')) {
+                    Vue.axios.get('/admin/record/delete/' + id)
+                        .then((response) => {
+                            console.log(response);
+                            if (response.status === 200) {
+                                location.reload();
+                                return true;
+                            }
+                            else {
+                                return false;
+                            };
+                        })
+                }
+                else {
+                    return false;
+                }
             },
         },
         beforeMount() {

@@ -23,40 +23,40 @@ class AdminApiController extends Controller
     public function deleteExercise($id) {
         $status = Exercise::destroy($id);
 
-        if ($status === 1) {
-            return response()->json('Succes - Deleted ' . $status . ' row(s) from Exercises', '200');
+        if ($status === true) {
+            return response()->json('Succes', '200');
         }
 
-        return response()->json('Failure - Deleted ' . $status .  ' row(s) from Exercises', '404');
+        return response()->json('Failure', '404');
     }
 
     public function deleteUser($id) {
         $status = User::destroy($id);
 
-        if ($status === 1) {
-            return response()->json('Succes - Deleted ' . $status . ' row(s) from Users', '200');
+        if ($status === true) {
+            return response()->json('Succes', '200');
         }
 
-        return response()->json('Failure - Deleted ' . $status .  ' row(s) from Users', '404');
+        return response()->json('Failure', '404');
     }
 
     public function deleteRecord($id) {
         $status = Record::destroy($id);
 
-        if ($status === 1) {
-            return response()->json('Succes - Deleted ' . $status . ' row(s) from Records', '200');
+        if ($status === true) {
+            return response()->json('Succes', '200');
         }
 
-        return response()->json('Failure - Deleted ' . $status .  ' row(s) from Records', '404');
+        return response()->json('Failure', '404');
     }
 
     public function deleteClass($id) {
         $status = ExerciseWeightClass::destroy($id);
 
-        if ($status === 1) {
-            return response()->json('Succes - Deleted ' . $status . ' row(s) from ExerciseWeightClasses', '200');
+        if ($status === true) {
+            return response()->json('Succes', '200');
         }
 
-        return response()->json('Failure - Deleted ' . $status .  ' row(s) from ExerciseWeightClasses', '404');
+        return response()->json('Failure', '404');
     }
 }
