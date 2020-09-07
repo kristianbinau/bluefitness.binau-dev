@@ -18,7 +18,7 @@
                 <td>{{ weightClass.gender }}</td>
                 <td>{{ weightClass.weight }}</td>
                 <td>{{ weightClass.created_at }}</td>
-                <td v-on:click="deleteRowAndRefresh(weightClass.id)" style="cursor: pointer">X</td>
+                <td v-on:click="deleteRowAndRefresh(weightClass.id, weightClass.name)" style="cursor: pointer">X</td>
             </tr>
             </tbody>
         </table>
@@ -37,14 +37,23 @@
             'data',
         ],
         methods: {
-            deleteRowAndRefresh(id) {
-                Vue.axios.get('/admin/class/delete/' + id)
-                    .then((response) => {
-                        console.log(response);
-                        if (response.status === 200) {
-                            location.reload();
-                        };
-                    })
+            deleteRowAndRefresh(id, name) {
+                if (confirm('Delete ' + name + " and all of it's records?")) {
+                    Vue.axios.get('/admin/class/delete/' + id)
+                        .then((response) => {
+                            console.log(response);
+                            if (response.status === 200) {
+                                location.reload();
+                                return true;
+                            }
+                            else {
+                                return false;
+                            };
+                        })
+                }
+                else {
+                    return false;
+                }
             },
         },
         beforeMount() {

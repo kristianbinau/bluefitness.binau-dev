@@ -14,7 +14,7 @@
                 <th scope="row">{{ exercise.id }}</th>
                 <td>{{ exercise.name }}</td>
                 <td>{{ exercise.created_at }}</td>
-                <td v-on:click="deleteRowAndRefresh(exercise.id)" style="cursor: pointer">X</td>
+                <td v-on:click="deleteRowAndRefresh(exercise.id, exercise.name)" style="cursor: pointer">X</td>
             </tr>
             </tbody>
         </table>
@@ -33,13 +33,23 @@
             'data',
         ],
         methods: {
-            deleteRowAndRefresh(id) {
-                Vue.axios.get('/admin/exercise/delete/' + id)
-                    .then((response) => {
-                        if (response.status === 200) {
-                            location.reload();
-                        };
-                    })
+            deleteRowAndRefresh(id, name) {
+                if (confirm('Delete ' + name + " and all of it's records?")) {
+                    Vue.axios.get('/admin/exercise/delete/' + id)
+                        .then((response) => {
+                            console.log(response);
+                            if (response.status === 200) {
+                                location.reload();
+                                return true;
+                            }
+                            else {
+                                return false;
+                            };
+                        })
+                }
+                else {
+                    return false;
+                }
             },
         },
         beforeMount() {

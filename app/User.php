@@ -40,8 +40,23 @@ class User extends Authenticatable
     /**
      * Get the child
      */
-    public function records()
+    public function records(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Record::class, 'exercise_id', 'id');
+        return $this->hasMany(Record::class, 'user_id', 'id');
+    }
+
+    /**
+     * Modify default destroy to also delete records
+     * @param $id
+     * @return bool|null
+     * @throws \Exception
+     */
+    public static function destroy($id): ?bool
+    {
+        // delete all related records
+        Record::where('user_id', $id)->delete();
+
+        // delete the user
+        return parent::destroy($id);
     }
 }
