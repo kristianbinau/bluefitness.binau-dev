@@ -43,4 +43,16 @@ class Record extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    /**
+     * Modify default destroy
+     * @param $id
+     * @return bool|null
+     * @throws \Exception
+     */
+    public static function destroy($id): ?bool
+    {
+        // delete the user
+        return parent::destroy($id);
+    }
 }
