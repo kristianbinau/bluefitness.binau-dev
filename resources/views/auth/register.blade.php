@@ -6,13 +6,6 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
-
-                @if (App::environment() === 'production')
-
-                    You can't create new Users in production!
-
-                @elseif(App::environment() === 'local')
-
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -76,8 +69,6 @@
                             </div>
                         </form>
                     </div>
-
-                @endif
             </div>
         </div>
     </div>
