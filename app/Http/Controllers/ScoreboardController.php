@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Exercise;
 use App\ExerciseWeightClass;
 use App\Record;
-use App\User;
-use Illuminate\Http\Request;
 
 class ScoreboardController extends Controller
 {

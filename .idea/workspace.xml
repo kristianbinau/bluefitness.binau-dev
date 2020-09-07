@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6002e62f-e041-45b7-8677-8dcb8bbe225e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exercise.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exercise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ExerciseGroup.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ExerciseGroup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ExerciseWeightClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ExerciseWeightClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AdminApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AdminApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExerciseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExerciseTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/RecordTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/RecordTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/UserTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/UserTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/WeightClassTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/WeightClassTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScoreboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ScoreboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +201,7 @@
       <workItem from="1599137545621" duration="8629000" />
       <workItem from="1599199246037" duration="35000" />
       <workItem from="1599334945884" duration="12336000" />
-      <workItem from="1599505025267" duration="1800000" />
+      <workItem from="1599505025267" duration="3935000" />
     </task>
     <servers />
   </component>
@@ -228,10 +221,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598183837128" />
-    <state x="-1550" y="354" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598633194760">
-      <screen x="-2560" y="-101" width="2560" height="1400" />
+    <state x="758" y="341" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599508544548">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1550" y="354" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-2560.-101.2560.1400@-2560.-101.2560.1400" timestamp="1598633194760" />
+    <state x="758" y="341" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1599508544548" />
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1599199279036">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
