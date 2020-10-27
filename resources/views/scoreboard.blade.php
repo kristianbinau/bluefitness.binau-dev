@@ -10,33 +10,34 @@
             <div class="container">
                 @foreach ($data as $table)
 
-                    <div class="label-container">
-                        <label>{{ $table['weightClass']->name .' - '. $table['weightClass']->weight }}</label>
-                    </div>
+                    <div>
+                        <div class="label-container">
+                            <label>{{ $table['weightClass']->name .' - '. $table['weightClass']->weight }}</label>
+                        </div>
 
-                    <div class="table-container">
-                        <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">Exercise</th>
-                                <th scope="col">Weight</th>
-                                <th scope="col">Person</th>
-                                <th scope="col">Date</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach ($table['exercises'] as $exercise)
+                        <div class="table-container">
+                            <table class="table">
+                                <thead class="thead-dark">
                                 <tr>
-                                    <th scope="row">{{ $exercise['exercise']->name }}</th>
-                                    <td>{{ $exercise['records'][0]->weight ?? '0' }} kg</td>
-                                    <td>{{ $exercise['records'][0]['user']->name ?? '' }}</td>
-                                    <td>{{ isset($exercise['records'][0]->date) === true ? $exercise['records'][0]->date : ''}}</td>
+                                    <th scope="col">Exercise</th>
+                                    <th scope="col">Weight</th>
+                                    <th scope="col">Person</th>
+                                    <th scope="col">Date</th>
                                 </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                @foreach ($table['exercises'] as $exercise)
+                                    <tr>
+                                        <th scope="row">{{ $exercise['exercise']->name }}</th>
+                                        <td>{{ $exercise['records'][0]->weight ?? '0' }} kg</td>
+                                        <td>{{ $exercise['records'][0]['user']->name ?? '' }}</td>
+                                        <td>{{ isset($exercise['records'][0]->date) === true ? $exercise['records'][0]->date : ''}}</td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-
                 @endforeach
             </div>
         </div>
