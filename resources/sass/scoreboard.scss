@@ -1,3 +1,14 @@
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+        background-color: white;
+    }
+    div {
+        break-inside: avoid;
+    }
+}
+
 body {
     background: linear-gradient(-60deg, #0f2027, #203a43, #2c5364, #23d5ab);
     background-size: 1000% 1000%;
