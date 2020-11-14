@@ -18,7 +18,7 @@ class Exercise extends Model
      *
      * @var array
      */
-    protected $fillable = ['id', 'name', 'exercise_group_id'];
+    protected $fillable = ['id', 'name', 'gender', 'exercise_group_id'];
 
     /**
      * Get the parent

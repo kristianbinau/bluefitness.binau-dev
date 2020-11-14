@@ -25,6 +25,25 @@
                 @endif
             </div>
 
+            <div class="form-group">
+                <label>Gender</label>
+                <select required class="form-control {{ $errors->has('gender') ? 'error' : '' }}"
+                        name="gender"
+                        id="gender">
+                    <option disabled hidden selected>Select a Gender</option>
+                    <option value="Men" >Men</option>
+                    <option value="Women" >Women</option>
+                    <option value="All" >All</option>
+                </select>
+
+                <!-- Error -->
+                @if ($errors->has('gender'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ $errors->first('gender') }}
+                    </div>
+                @endif
+            </div>
+
             <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
         </form>
 

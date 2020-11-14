@@ -130,7 +130,7 @@ class AdminController extends Controller
 
     public function exercise()
     {
-        $exercises = Exercise::select('id', 'name', 'created_at')->cursor();
+        $exercises = Exercise::select('id', 'name', 'gender', 'created_at')->cursor();
 
         return view('admin.exercise', ['exercises' => $exercises]);
     }
@@ -139,14 +139,17 @@ class AdminController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|unique:exercises',
+            'gender' => 'required',
         ]);
 
         $name = $request['name'];
+        $gender = $request['gender'];
 
         //  Store data in database
         Exercise::create(
             [
                 'name' => $name,
+                'gender' => $gender,
             ]
         );
 
