@@ -18,7 +18,8 @@ class ScoreboardController extends Controller
                 'exercises' => [],
             ];
             $weightClassId = $weightClass['id'];
-            $exercises = Exercise::select('id', 'name')->cursor();
+            $weightClassGender = $weightClass['gender'];
+            $exercises = Exercise::select('id', 'name', 'gender')->where('gender', '=', $weightClassGender)->orWhere('gender', '=', 'All')->cursor();
             foreach ($exercises as $exercise) {
                 $exerciseId = $exercise['id'];
                 $records = Record::where('exercise_weight_class_id', '=', $weightClassId)->where('exercise_id', '=', $exerciseId)->with('exercise')->with('exerciseWeightClass')->with('user')->orderBy('weight', 'desc')->get();

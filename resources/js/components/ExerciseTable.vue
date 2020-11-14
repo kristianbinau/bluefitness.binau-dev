@@ -5,6 +5,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Exercise</th>
+                <th scope="col">Gender</th>
                 <th scope="col">Date</th>
                 <th scope="col">Del</th>
             </tr>
@@ -13,6 +14,7 @@
             <tr v-for="exercise in exercises">
                 <th scope="row">{{ exercise.id }}</th>
                 <td>{{ exercise.name }}</td>
+                <td>{{ exercise.gender }}</td>
                 <td>{{ exercise.created_at }}</td>
                 <td v-on:click="deleteRowAndRefresh(exercise.id, exercise.name)" style="cursor: pointer">X</td>
             </tr>
