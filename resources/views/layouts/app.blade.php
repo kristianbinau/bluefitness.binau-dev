@@ -27,6 +27,8 @@
             @yield('content')
         </main>
     </div>
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""/></noscript>
 </body>
 @yield('scripts-append')
 </html>
